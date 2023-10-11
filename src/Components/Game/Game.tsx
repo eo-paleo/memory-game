@@ -128,9 +128,6 @@ function Game() {
 
   return (
     <div>
-      {Fireworks.map((item, index) => {
-        return <div key={index} className={`${gameState === GameState.WON ? "firework" : ""}`}></div>;
-      })}
       <ControlPanel
         ButtonConfigs={[
           { disabled: gameState !== GameState.INACTIVE || (timerEnabled && timerValue === ""), style: ButtonStyles.Green, text: "Start Game", onClick: startGame },
